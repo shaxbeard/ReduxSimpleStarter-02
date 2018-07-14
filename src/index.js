@@ -5,6 +5,13 @@ import SearchBar from './components/search_bar';
 
 const API_KEY = 'AIzaSyBQeEpPgGGfDYj2XS-HKHW_7qKSTLltij4'; 
 
+import YTSearch from 'youtube-api-search'; // I think we set YTSearch as the variable here
+
+YTSearch({key: API_KEY, term: 'surfboards'}, function(data) { // YouTube search then a callback function
+  console.log(data);
+});
+
+
 // Create a new component. This component should produce some html
 
 const App = () => {
